@@ -1,0 +1,31 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "DTJson",
+	"Description": "Convert Between Blueprint Structure And JSON / UE5",
+	"Category": "DT",
+	"CreatedBy": "Dexter Wan",
+	"CreatedByURL": "45141961@qq.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "5.3",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "DTBPJson",
+			"Type": "Runtime",
+			"LoadingPhase": "PostConfigInit",
+			"PlatformAllowList": [
+				"Win64",
+				"Mac",
+				"IOS",
+				"Android",
+				"Linux",
+				"TVOS"
+			]
+		}
+	]
+}
