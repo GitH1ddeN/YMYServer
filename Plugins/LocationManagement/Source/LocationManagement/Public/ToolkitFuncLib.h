@@ -302,4 +302,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "FileOperation")
 	static bool GetJsonFieldAndValue(const FString& JsonString, FString& JsonField, FString& JsonValue);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Utilities|Sockets")
+	static int64 Get13Timestamp();
 };

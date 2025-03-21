@@ -49,3 +49,14 @@ bool UToolkitFuncLib::GetJsonFieldAndValue(const FString& JsonString, FString& J
 
 	return bSuccess;
 }
+
+int64 UToolkitFuncLib::Get13Timestamp()
+{
+	// 获取当前的时间点
+	FDateTime CurrentTime = FDateTime::UtcNow();
+	// 获取从1970年1月1日00:00:00 UTC到当前时间点所经过的总时间
+	FDateTime Epoch(1970, 1, 1);
+	FTimespan TimeSinceEpoch = CurrentTime - Epoch;
+	// 将总时间转换为毫秒数
+	return TimeSinceEpoch.GetTotalMilliseconds();
+}
