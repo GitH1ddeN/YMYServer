@@ -286,7 +286,12 @@ public:
 	{
 		return FVector(InData.Roll, InData.Pitch, InData.Yaw);
 	}
-
+	
+	/**
+	* 获取本地IP地址
+	*
+	* @return						返回本地IP地址
+	*/
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category ="Utilities|Sockets")
 	static FString GetLocalIPAddress();
 
@@ -300,9 +305,30 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "FileOperation")
 	static bool ReadFile(const FString& FilePath, FString& FileContent);
 
+	/**
+	* 解析传入Json的字段名和字段值
+	*
+	* @param		JsonString		传入的Json文本
+	* @param		JsonField		字段名
+	* @param		JsonValue		字段值
+	* @return						返回是否解析成功
+	*/
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "FileOperation")
 	static bool GetJsonFieldAndValue(const FString& JsonString, FString& JsonField, FString& JsonValue);
 
+	/**
+	* 获取当前时间的13位时间戳
+	*
+	* @return						返回当前时间的13位时间戳
+	*/
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Utilities|Sockets")
 	static int64 Get13Timestamp();
+
+	/**
+	* 获取项目版本号
+	*
+	* @return						返回项目版本号
+	*/
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "ProjectSetting")
+	static FString GetProjectVersion();
 };

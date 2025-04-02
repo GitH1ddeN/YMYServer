@@ -60,3 +60,13 @@ int64 UToolkitFuncLib::Get13Timestamp()
 	// 将总时间转换为毫秒数
 	return TimeSinceEpoch.GetTotalMilliseconds();
 }
+
+FString UToolkitFuncLib::GetProjectVersion()
+{
+	FString Version;
+	if (GConfig)
+	{
+		GConfig->GetString(TEXT("/Script/EngineSettings.GeneralProjectSettings"), TEXT("ProjectVersion"), Version, GGameIni);
+	}
+	return Version;
+}
